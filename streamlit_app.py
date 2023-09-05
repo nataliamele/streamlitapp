@@ -42,7 +42,7 @@ except URLError as e:
   sl.error()
 
 ### STOP
-streamlit.stop()
+#sl.stop()
 #sl.write('The user entered', fruit_choice)
 
 my_cnx = snowflake.connector.connect(**sl.secrets["snowflake"])
