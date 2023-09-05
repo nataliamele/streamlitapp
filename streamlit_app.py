@@ -25,7 +25,10 @@ sl.dataframe(fruits_to_show)
 
 sl.header("Fruityvice Fruit Advice!")
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruit_choice = sl.text_input('What fruit would you like info about?', 'Kiwi')
+sl.write('The user entered', fruit_choice)
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # sl.text(fruityvice_response.json())
 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
