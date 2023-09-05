@@ -46,3 +46,6 @@ sl.dataframe(my_data_rows)
 input_add_fruit = sl.text_input('What fruit would you like to add?', 'Jackfruit')
 sl.write('Thanks fir adding', input_add_fruit)
 
+sl.session_state['my_data_rows'].append(input_add_fruit, ignore_index=False)
+sl.dataframe(my_data_rows)
+
