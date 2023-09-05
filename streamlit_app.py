@@ -41,6 +41,8 @@ try:
 except URLError as e: 
   sl.error()
 
+### STOP
+streamlit.stop()
 #sl.write('The user entered', fruit_choice)
 
 my_cnx = snowflake.connector.connect(**sl.secrets["snowflake"])
@@ -51,7 +53,6 @@ my_data_rows = my_cur.fetchall()
 sl.header("Fruit load list contains:")
 sl.dataframe(my_data_rows)
 
-streamlit.stop()
 input_add_fruit = sl.text_input('What fruit would you like to add?', 'Jackfruit')
 sl.write('Thanks fir adding', input_add_fruit)
 
