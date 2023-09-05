@@ -1,6 +1,7 @@
 import streamlit as sl
 import pandas as pd
 import requests
+import snowflake.connector
 
 sl.title('This is just a begining of the Streamlit new cool App')
 
