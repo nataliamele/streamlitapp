@@ -23,7 +23,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 sl.dataframe(fruits_to_show)
 
-streamlit.header("Fruityvice Fruit Advice!")
+sl.header("Fruityvice Fruit Advice!")
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 sl.text(fruityvice_response.json())
